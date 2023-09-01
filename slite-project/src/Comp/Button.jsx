@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({props, className}) => {
+const Button = ({props, className, id}) => {
   return (
     <div>
-        <button className={`${className}`}>{props}</button>
+      <button id={`${id}`}  className={`${className}`}>{props}</button>
     </div>
   )
 }
