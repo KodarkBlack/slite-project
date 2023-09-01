@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Header.css'
 import Line from '../assets/line.svg'
 import Slite from '../assets/slitepeople.svg'
 import Pic from '../assets/pic.png'
@@ -15,7 +16,7 @@ const Header = () => {
             <img 
               src={Line} 
               alt="Line" 
-              className='w-[130px]' 
+              className='w-[130px] animate-bounce' 
             />
           </div>
           <h3 className='text-center text-zinc-800 text-5xl font-medium leading-10'>to your team</h3>
@@ -27,9 +28,9 @@ const Header = () => {
         <input 
          type="email" 
          name="email" 
-         id="email" placeholder='name@company.com' 
+         id="email" 
+         placeholder='Kodarkblack@gmail.com ' 
          className='h-14 pl-8 pr-44 py-5 left-0 top-0 absolute rounded-3xl border border-zinc-800 justify-start items-center inline-flex'  
-         
         />
         <Button
           props={'Start for free'}
@@ -37,12 +38,12 @@ const Header = () => {
         />
       </form>
 
-      <img src={Slite} className='w-screen h-96 mt-10' alt="" />
+      <img src={Slite} className='w-screen h-96 mt-10' alt="We love you" />
 
       <p className="w-24 h-3 mb-5 text-center text-neutral-400 text-xs font-semibold  uppercase leading-3 tracking-wide">8:45 aM - PDT</p>
 
-      <div className="w-96 h-28 px-5 bg-slate-300 rounded shadow justify-between items-center gap-2 inline-flex">
-        <img className=" w-20 h-20" src={Pic} />
+      <div className="w-96 h-28 px-5 bg-slate-300 rounded shadow justify-between items-center gap-2 inline-flex animate-bounce">
+        <img className=" w-20 h-20 animate-bounce " src={Pic} />
         <div className="w-96 self-stretch pl-2 pr-20 pt-2.5 pb-3 flex-col justify-center items-start gap-1.5 inline-flex">
             <h3 className=" w-60 h-5 text-zinc-800 text-base font-bold leading-relaxed">Georges made some changes</h3>
             <p className=" w-56 h-5 text-zinc-800 text-opacity-70 text-base font-medium leading-relaxed">The abnormal guide to remote</p>

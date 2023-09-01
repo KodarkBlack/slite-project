@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from './Button'
 import Slite from '../assets/frame.svg'
 import { BsFillMenuAppFill } from 'react-icons/bs'
+import '../Header.css'
 
 
 const Navbar = () => {
@@ -21,12 +22,12 @@ const Navbar = () => {
         />
 
         <BsFillMenuAppFill
-          className='block md:hidden cursor-pointer'
+          className='block md:hidden animate-bounce transition 3s ease cursor-pointer'
           onClick={toggleMenu}
         />
      </div>
 
-      <div className={`bg-rose-100 rounded   transition ease-in md:flex  ${showMenu ? 'block' : 'hidden'}`}>
+      <div className={`bg-rose-100 rounded   transition ease-in md:flex  ${showMenu ? 'block animate-bounce' : 'hidden'}`}>
         <ul className='md:flex md:gap-5'>
           <li><a className='w-8 h-5 text-right text-zinc-800 text-sm font-medium leading-relaxed' href="#">Products</a></li>
           <li><a className='w-8 h-5 text-center text-zinc-800 text-sm font-medium leading-relaxed' href="#">Template</a></li>
@@ -40,11 +41,11 @@ const Navbar = () => {
             />
             <Button 
               props={"Request a demo"} 
-              className={`mb-2 w-40 h-11 px-5 pt-2.5 pb-2 text-zinc-800 text-sm font-medium leading-relaxed rounded-3xl border hover:border-blue-600 transition 5s ease border-zinc-800 justify-center items-center inline-flex`}
+              className={`mb-2 w-40 h-11 px-5 pt-2.5 pb-2 text-zinc-800 text-sm font-medium leading-relaxed rounded-3xl border hover:border-blue-600 transition 5s ease border-zinc-800 justify-center items-center inline-flex animate-bounce`}
             />
             <Button 
               props={"Start for free"} 
-              className={`mb-2 w-40 h-11 px-5 pt-3 pb-3.5 bg-blue-600 hover:border text-zinc-800 text-sm font-medium leading-relaxed hover:border-zinc-600 hover:bg-transparent transition 5s ease rounded-3xl justify-center items-center inline-flex`}
+              className={`mb-2 w-40 h-11 px-5 pt-3 pb-3.5 bg-blue-600 hover:border text-zinc-800 text-sm font-medium leading-relaxed hover:border-zinc-600 hover:bg-transparent transition 5s ease rounded-3xl justify-center items-center inline-flex animate-bounce`}
             />
           </ul>
         </ul>

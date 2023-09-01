@@ -1,0 +1,16 @@
+/* Header.css */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the bounce height as needed */
+  }
+}
+
+/* Define the custom animation class */
+.animate-bounce {
+  animation: bounce 2s infinite; /* Adjust the duration as needed */
+  animation-timing-function: 2s ease-out; /* Adjust the timing function as needed */
+}
+
