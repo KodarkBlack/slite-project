@@ -10,7 +10,7 @@ const Template = () => {
       </div>
       <Button 
           props={'Browse template'} 
-          className={` mt-5 w-40 h-11 px-5 pt-3 pb-3.5 bg-blue-600 hover:border text-zinc-800 text-sm font-medium leading-relaxed hover:border-zinc-600 hover:bg-transparent transition 5s ease rounded-3xl justify-center items-center inline-flex animate-bounce`}
+          className={` mt-5 w-40 h-11 px-5 pt-2.5 pb-2 text-zinc-800 text-sm font-medium leading-relaxed rounded-3xl border hover:border-blue-600 transition 5s ease border-zinc-800 justify-center items-center inline-flex animate-bounce`}
         /> 
     </div>
 
