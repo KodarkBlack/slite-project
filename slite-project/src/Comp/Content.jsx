@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Frame from '../assets/contframe.svg'
-import Wiki from '../assets/ones.png'
-import Projects from '../assets/two.png'
+import Projects from '../assets/ones.png'
+import Wiki from '../assets/projects.png'
 import Processes from '../assets/three.png'
 import Onboarding from '../assets/four.png'
 import Meeting from '../assets/five.png'
@@ -18,7 +18,7 @@ import More from '../assets/nine.png'
 
 
 const Content = () => {
-    const [selectedItem, setSelectedItem] = useState('Onboarding');
+    const [selectedItem, setSelectedItem] = useState('Wiki');
 
     const handleItemClick = (item) => {
         setSelectedItem(item)
@@ -40,36 +40,41 @@ const Content = () => {
 
 
   return (
-    <div className="w-screen justify-center items-center inline-flex">
-    <div className="w-96 h-96 relative flex-col justify-start items-start flex">
-      <div className="w-96 h-px relative" />
-      <div className="w-96 justify-center items-start gap-4 inline-flex">
-        <div className="w-40 h-96 relative flex-col justify-start items-start flex">
-          <div className="w-40 h-96 relative">
-            {itemList.map((item) => (
-              <div
-                key={item}
-                className={`w-36 h-14 pl-5 pr-24 py-4 left-[4px] top-[2px] absolute bg-white rounded shadow justify-start items-center inline-flex 
-                ${ selectedItem === item ? 'bg-blue-200' : ''}`}
-                onClick={() => handleItemClick(item)}
-              >
-                <b className="w-8 h-5 text-zinc-800 text-sm font-medium leading-snug">{item}</b>
-              </div>
-            ))}
-          </div>
+
+    <div className="w-full   flex-col justify-between py-5 px-[10%]">
+    <div className="w-full h-px " />
+    <div className="w-full gap-4  inline-flex">
+      <div className="w-40   flex-col  items-start flex">
+        <div className="gap-4">
+          {itemList.map((item) => (
+            <div
+              key={item}
+              className={`cursor-pointer mb-1 p-4 bg-blue-200 hover:bg-white rounded shadow transition-colors duration-300 ${
+                selectedItem === item ? 'bg-blue-200' : ''
+              }`}
+              onClick={() => handleItemClick(item)} // Change on click
+              onMouseEnter={() => handleItemClick(item)} // Highlight on hover
+            >
+              <b className=" text-zinc-800 text-sm font-medium leading-snug">{item}</b>
+            </div>
+          ))}
         </div>
-        <div className="w-96 h-96 relative flex-col justify-start items-start flex">
-          <img
-            className="w-96 h-96"
-            src={itemToImage[selectedItem]}
-            alt={`Image for ${selectedItem}`}
-          />
-          <div className="w-96 h-96 bg-white" />
-        </div>
+      </div>
+      <div className="w-full  relative">
+        <img
+          className="w-[100%] h-auto max-h-[100%] absolute  "
+          src={Frame}
+          alt="Laptop Frame"
+        />
+        <img
+          className="w-[100%] h-auto max-h-[100%] rounded-xl  top-[10%]   left-[10%]"
+          src={itemToImage[selectedItem]}
+          alt={`Image for ${selectedItem}`}
+        />
       </div>
     </div>
   </div>
-    
+
   )
 }
 
