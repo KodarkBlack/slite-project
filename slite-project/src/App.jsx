@@ -3,6 +3,7 @@ import Header from './Comp/Header'
 import Logos from './Comp/Logos'
 import Navbar from './Comp/Navbar'
 import Content from './Comp/Content'
+import Template from './Comp/Template'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Logos/>
       <About/>
       <Content/>
+      <Template/>
     </div>
   )
 }
