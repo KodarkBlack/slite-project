@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className='w-screen py-20 flex-col justify-center items-center inline-flex bg-rose-100'>
       <div className=' w-screen  flex-col justify-start items-start flex'>
-        <div className='w-screen h-[inherit] flex gap-2 justify-center mt-10 items-center'>
+        <div className='w-screen h-[inherit] flex gap-2 lg:justify-center mt-10 items-center sm:justify-center '>
           <h3 className='text-center text-zinc-800 text-5xl font-medium leading-10'>Bring</h3>
           <div className=' flex-col justify-start items-start flex'>
             <h3 className='text-center  text-zinc-800 text-5xl font-medium'>clarity</h3>
@@ -19,18 +19,18 @@ const Header = () => {
               className='w-[130px] animate-bounce' 
             />
           </div>
-          <h3 className='text-center text-zinc-800 text-5xl font-medium leading-10'>to your team</h3>
+          <h3 className='text-center lg:text-zinc-800 text-5xl font-medium leading-10 text-blue-800'>to your team</h3>
         </div>
       </div>
       <p className="text-center mt-5 text-zinc-800 text-[12px] font-medium leading-relaxed">Slite is a modern knowledge base that drives action with structured docs, thoughtful collaboration <br /> and confident decision-making.</p>
 
-      <form className='w-screen h-14 relative lg:ml-[70%] mt-5  '>
+      <form className=' h-14 relative  mt-5  '>
         <input 
          type="email" 
          name="email" 
          id="email" 
          placeholder='Kodarkblack@gmail.com ' 
-         className='h-14 pl-8 pr-44 py-5 left-0 top-0 absolute rounded-3xl border border-zinc-800 justify-start items-center inline-flex'  
+         className='h-14 pl-8 pr-44 py-5  rounded-3xl border border-zinc-800  items-center inline-flex'  
         />
         <Button
           props={'Start for free'}
